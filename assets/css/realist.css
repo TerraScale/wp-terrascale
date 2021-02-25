@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Realist';
+    src: url('https://vintage-voyage.co.uk/wp-content/themes/vintage_voyage/assets/fonts/Realist.woff2') format('woff2'),
+    url('https://vintage-voyage.co.uk/wp-content/themes/vintage_voyage/assets/fonts/Realist.woff') format('woff'),
+    url('https://vintage-voyage.co.uk/wp-content/themes/vintage_voyage/assets/fonts/Realist.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
