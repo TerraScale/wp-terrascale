@@ -35,18 +35,10 @@
 
 			<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
 				<div class="social-links">
-					<ul>
-						<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a></li>
-						<li><a href="#" target="_blank"><i class="fab fa-twitter"></i> </a></li>
-						<li><a href="#" target="_blank"><i class="fab fa-instagram"></i> </a></li>
-						<li><a href="#" target="_blank"><i class="fab fa-youtube"></i> </a></li>
-						<li><a href="#" target="_blank"><i class="fab fa-vimeo-v"></i> </a></li>
-						<li><a href="#" target="_blank"><i class="fab fa-medium-m"></i> </a></li>
-						<li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i> </a></li>
-					</ul>
+					<?php dynamic_sidebar( 'social-links' ); ?>
 				</div>
 				<br>
-				<a href="#">Terms of Use</a>
+				<a href="<?php echo home_url() ?>/terms-of-use">Terms of Use</a>
 			</div>
 		</div>
 

@@ -116,12 +116,23 @@ add_action( 'after_setup_theme', 'terrascale_content_width', 0 );
 function terrascale_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'terrascale' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Top Bar left', 'terrascale' ),
+			'id'            => 'top-bar-left',
 			'description'   => esc_html__( 'Add widgets here.', 'terrascale' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_widget' => '<div id="%1$s" class="%2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title" hidden>',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Social Links', 'terrascale' ),
+			'id'            => 'social-links',
+			'description'   => esc_html__( 'Add widgets here.', 'terrascale' ),
+			'before_widget' => '<div id="%1$s" class="%2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title" hidden>',
 			'after_title'   => '</h2>',
 		)
 	);
@@ -139,6 +150,9 @@ function terrascale_scripts() {
 	wp_enqueue_style( 'FontAw', get_template_directory_uri() . '/assets/css/all.min.css', array(), '5.15.1' );
 	wp_enqueue_style( 'Layout', get_template_directory_uri() . '/assets/css/layout.css', array(), _S_VERSION );
 
+	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/assets/js/jquery-3.5.1.min.js', array(), '3.5.1', true );
+	wp_enqueue_script( 'BootStrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
+	wp_enqueue_script( 'Custom', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

@@ -22,52 +22,43 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<div class="top-bar">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
-					<ul>
-						<li><a href="tel:+1 (800) XXX-XXXX" target="_blank">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.png" alt="Phone">
-								<span>+1 (800) XXX-XXXX</span> </a></li>
-						<li><a href="mailto:help@terrascale.org" target="_blank">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/email.png" alt="Email">
-								<span>help@terrascale.org</span> </a></li>
-					</ul>
-				</div>
-				<div class="col-xl-8 col-lg-8 col-md-6 col-sm-6 col-6">
-					<div class="top-right-bar">
-						<ul>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Media</a></li>
-							<li><a href="#">FAQs</a></li>
-						</ul>
-						<div class="social-links">
-							<ul>
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i> </a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i> </a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-youtube"></i> </a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-vimeo-v"></i> </a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-medium-m"></i> </a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i> </a></li>
-							</ul>
-						</div>
+<div class="top-bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+				<?php dynamic_sidebar( 'top-bar-left' ); ?>
+			</div>
+
+			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+				<div class="top-right-bar">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'top-nav',
+							'menu_id'         => 'top-bar-nav',
+							'container'       => 'div',
+							'container_class' => 'top-bar-nav'
+						)
+					);
+					?>
+					<div class="social-links">
+						<?php dynamic_sidebar( 'social-links' ); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="masthead" class="site-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
-					<div class="site-branding">
-						<?php the_custom_logo(); ?>
-					</div>
+</div>
+<div id="masthead" class="site-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+				<div class="site-branding">
+					<?php the_custom_logo(); ?>
 				</div>
-				<div class="col-xl-10 col-lg-10 col-md-6 col-sm-2 col-6">
+			</div>
+			<div class="col-xl-10 col-lg-10 col-md-6 col-sm-2 col-6">
+				<div class="d-lg-block d-md-none d-none">
 					<?php
 					wp_nav_menu(
 						array(
@@ -79,6 +70,33 @@
 					);
 					?>
 				</div>
+				<div class="d-lg-none d-md-block d-block">
+					<div class="mobile-menu-btn">
+						<span>Menu</span> <i class="fas fa-ellipsis-v"></i>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div><!-- #masthead -->
+	</div>
+</div><!-- #masthead -->
+<div class="mobile-navigation-container">
+	<span class="menu-close"><i class="fas fa-times"></i></span>
+	<?php
+	wp_nav_menu(
+		array(
+			'theme_location'  => 'menu-1',
+			'menu_id'         => 'primary-menu',
+			'container'       => 'nav',
+			'container_id'    => 'mobile-navigation',
+			'container_class' => 'mobile-navigation'
+		)
+	);
+	?>
+	<span class="mobile-menu-toggle"><i class="fas fa-angle-down"></i></span>
+
+	<span class="menu-footer">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png" alt="<?php echo bloginfo() ?>"
+			 class="d-block w-50 mx-auto"><hr>
+        &copy; <?php echo date( 'Y' ); ?> <?php echo bloginfo() ?>. All Rights Reserved.</span>
+</div>
+<div id="page" class="site">
