@@ -62,7 +62,7 @@
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location'  => 'menu-1',
+							'theme_location'  => 'header-nav',
 							'menu_id'         => 'site-navigation',
 							'container'       => 'div',
 							'container_class' => 'site-navigation'
@@ -84,7 +84,7 @@
 	<?php
 	wp_nav_menu(
 		array(
-			'theme_location'  => 'menu-1',
+			'theme_location'  => 'header-nav',
 			'menu_id'         => 'primary-menu',
 			'container'       => 'nav',
 			'container_id'    => 'mobile-navigation',
