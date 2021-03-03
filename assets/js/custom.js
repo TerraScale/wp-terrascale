@@ -19,6 +19,11 @@ window.onscroll = function () {
 	myFunction()
 };
 
+$('.collapseHead').on('click', function () {
+	$(this).parent().children('.collapseData').slideToggle().toggleClass('aa');
+
+});
+
 const header = document.getElementById("masthead");
 const sticky = header.offsetTop;
 const ContentBox = document.getElementById('page');

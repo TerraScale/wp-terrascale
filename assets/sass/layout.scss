@@ -265,6 +265,7 @@ body {
 	}
 }
 
+
 .with-every {
 	background-color: #0b557a;
 	text-align: center;
@@ -575,6 +576,61 @@ body {
 		}
 	}
 }
+
+.collapse-box {
+
+	cursor: pointer;
+
+	.wpb_wrapper {
+		width: 100%;
+		align-items: center;
+		height: 100px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	img {
+		transition: $Transition;
+
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.collapseHead {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		justify-content: center;
+		background-color: #ffffff;
+		box-shadow: 1px 10px 10px 0 #979797;
+		transition: all 0.5s ease;
+		&:hover {
+			background-color: $Secondary-Color;
+			color: #ffffff;
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+	}
+
+	.collapseData {
+		display: none;
+		color: #000000 !important;
+		background-color: #ffffff;
+		z-index: 8;
+		position: relative;
+		padding: 20px;
+	}
+
+
+}
+
 
 @import '_custom.scss';
 @import '_responsive.scss';
