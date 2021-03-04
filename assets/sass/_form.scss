@@ -2,20 +2,36 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 0;
-  border-radius: 50px;
-  line-height: 1;
-  padding: 10px 25px;
-  height: 50px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: $Transition;
-  outline: none;
+	border: 0;
+	border-radius: 0;
+	line-height: 1;
+	padding: 10px 25px;
+	height: 50px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	transition: $Transition;
+	outline: none;
+	background-color: $Primary-Color;
+	color: #FFFFFF;
+	position: relative;
+}
+
+button::after,
+input[type="button"]::after,
+input[type="reset"]::after,
+input[type="submit"]::after {
+	content: '';
+	width: 20%;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	display: inline-block;
+	top: 23px;
+	right: 8px;
 }
 
 button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
-  outline: none;
+	outline: none;
 
 }
 
@@ -34,17 +50,18 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea, select {
-  color: $Primary-Color;
-  border: 1px solid #e6e6e6;
-  border-radius: 0px;
-  padding: 8px 8px 8px 20px;
-  min-height: 50px;
-  margin-bottom: 20px;
-  width: 100%;
-  font-size: 16px;
-  transition: $Transition;
-  outline: none;
+textarea, select,
+.form-control {
+	color: $Primary-Color;
+	border: 1px solid #e6e6e6;
+	padding: 8px 8px 8px 20px;
+	min-height: 50px;
+	margin-bottom: 20px;
+	width: 100%;
+	font-size: 16px;
+	transition: $Transition;
+	outline: none;
+	border-radius: 0;
 }
 
 input[type="text"]:focus,
@@ -62,17 +79,19 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-textarea:focus, select:focus {
-  color: $Primary-Color;
-  border-color: $Secondary-Color;
-  box-shadow: 0 0 0 0.2rem rgba(177, 107, 96, .5);
+textarea:focus, select:focus,
+.form-control:focus {
+	color: $Primary-Color;
+	border-color: $Secondary-Color;
+	box-shadow: 0 0 0 0.2rem rgba(1, 115, 183, .5);
 }
 
 select {
-  border: 1px solid #ccc;
+	border: 1px solid #ccc;
 
 }
 
 textarea {
-  width: 100%;
+	width: 100%;
+	border-radius: 0;
 }

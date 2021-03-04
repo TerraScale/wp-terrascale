@@ -610,9 +610,11 @@ body {
 		background-color: #ffffff;
 		box-shadow: 1px 10px 10px 0 #979797;
 		transition: all 0.5s ease;
+
 		&:hover {
 			background-color: $Secondary-Color;
 			color: #ffffff;
+
 			img {
 				filter: brightness(0) invert(1);
 			}
@@ -631,6 +633,19 @@ body {
 
 }
 
+.contact-us-form {
+	a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+	input {
+		&.contact-us-btn {
+			float: right;
+			width: 150px;
+		}
+	}
+}
 
 @import '_custom.scss';
 @import '_responsive.scss';

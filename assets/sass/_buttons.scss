@@ -1,6 +1,6 @@
 
 .btn {
-  border-radius: 50px !important;
+  border-radius: 0px !important;
   border: 0 !important;
   height: 65px !important;
   transition: $Transition !important;
@@ -8,7 +8,6 @@
 
 .btn-primary {
   background-color: $Primary-Color !important;
-
   &:hover, &:focus, &:active, &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active,
