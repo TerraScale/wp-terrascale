@@ -12,11 +12,10 @@ get_header();
 
 	<div class="container">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'terrascale' ); ?></h1>
-			</header><!-- .page-header -->
-		</section><!-- .error-404 -->
+		<div class="error-404 pt-5 not-found text-center">
+			<h1 class="display-1">404</h1>
+			<h3 class="page-title text-secondary"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'terrascale' ); ?></h3>
+		</div><!-- .error-404 -->
 
 	</div><!-- #main -->
 

@@ -3,6 +3,8 @@ $(document).ready(function () {
 	setTimeout(function () {
 		$("td.value select option:first").attr({'selected': 'selected', 'value': ' '});
 	}, 3000);
+	$('.mobile-navigation-container span.mobile-menu-toggle').insertAfter('.mobile-navigation li.menu-item-has-children > a');
+
 });
 
 $('.moveToTop').on('click', function () {
@@ -11,6 +13,9 @@ $('.moveToTop').on('click', function () {
 
 $('.mobile-menu-btn').on('click', function () {
 	$('.mobile-navigation-container').css('left', '0');
+});
+$('span.mobile-menu-toggle').on('click', function () {
+	$(this).next('ul.sub-menu').slideToggle('slow');
 });
 $('.menu-close').on('click', function () {
 	$('.mobile-navigation-container').css('left', '-100%');

@@ -174,6 +174,7 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/custom-code.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -182,3 +183,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_image_size( 'custom-thumb', 700, 500 );
