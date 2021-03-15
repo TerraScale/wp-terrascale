@@ -387,7 +387,7 @@ body {
       list-style: none;
       text-align: center;
       display: inline-block;
-      padding: 0 15px;
+      padding: 0 10px;
       position: relative; }
       .site-header .site-navigation ul li.menu-item-has-children::after {
         content: '';
@@ -395,12 +395,12 @@ body {
         width: 8px;
         display: block;
         background-color: #fff;
-        border-bottom: 3px solid #04629b;
-        border-right: 3px solid #04629b;
+        border-bottom: 1px solid #04629b;
+        border-right: 1px solid #04629b;
         transform: rotate(45deg);
         position: absolute;
         top: 17px;
-        right: 3px;
+        right: 1px;
         transition: all 0.5s ease; }
       .site-header .site-navigation ul li a {
         line-height: 48px;

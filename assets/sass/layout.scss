@@ -157,7 +157,7 @@ body {
 				list-style: none;
 				text-align: center;
 				display: inline-block;
-				padding: 0 15px;
+				padding: 0 10px;
 				position: relative;
 
 				&.menu-item-has-children {
@@ -167,12 +167,12 @@ body {
 						width: 8px;
 						display: block;
 						background-color: #fff;
-						border-bottom: 3px solid $Primary-Color;
-						border-right: 3px solid $Primary-Color;
+						border-bottom: 1px solid $Primary-Color;
+						border-right: 1px solid $Primary-Color;
 						transform: rotate(45deg);
 						position: absolute;
 						top: 17px;
-						right: 3px;
+						right: 1px;
 						transition: $Transition;
 					}
 				}
