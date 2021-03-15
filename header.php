@@ -52,12 +52,12 @@
 <div id="masthead" class="site-header">
 	<div class="container">
 		<div class="row">
-			<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+			<div class="col-xl-2 col-lg-12 col-md-6 col-sm-6 col-6">
 				<div class="site-branding">
 					<?php the_custom_logo(); ?>
 				</div>
 			</div>
-			<div class="col-xl-10 col-lg-10 col-md-6 col-sm-2 col-6">
+			<div class="col-xl-10 col-lg-12 col-md-6 col-sm-2 col-6">
 				<div class="d-lg-block d-md-none d-none">
 					<?php
 					wp_nav_menu(
