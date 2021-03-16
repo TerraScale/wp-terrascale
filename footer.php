@@ -12,7 +12,7 @@
 ?>
 </div><!-- #page -->
 
-<div id="colophon" class="site-footer">
+<div id="colophon" hidden class="site-footer">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -45,7 +45,33 @@
 
 	</div>
 </div><!-- #colophon -->
-
+<div class="site-footer-two">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
+				<div class="text-md-start text-sm-center text-center">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'footer-nav',
+							'menu_id'         => 'site-footer-nav',
+							'container'       => 'div',
+							'container_class' => 'site-footer-nav'
+						)
+					);
+					?>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 col-12 order-md-2 order-sm-1 order-1">
+				<div class="text-md-end text-sm-center text-center">
+					<div class="social-links">
+						<?php dynamic_sidebar( 'social-links' ); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <?php wp_footer(); ?>
 
 </body>
