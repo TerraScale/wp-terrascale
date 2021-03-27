@@ -22,6 +22,8 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="stripe-right"></div>
+<div class="stripe-left"></div>
 <div class="top-bar">
 	<div class="container">
 		<div class="row">
@@ -31,6 +33,9 @@
 
 			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 				<div class="top-right-bar">
+					<div class="social-links">
+						<?php dynamic_sidebar( 'social-links' ); ?>
+					</div>
 					<?php
 					wp_nav_menu(
 						array(
@@ -41,9 +46,6 @@
 						)
 					);
 					?>
-					<div class="social-links">
-						<?php dynamic_sidebar( 'social-links' ); ?>
-					</div>
 				</div>
 			</div>
 		</div>

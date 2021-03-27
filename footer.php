@@ -45,7 +45,21 @@
 
 	</div>
 </div><!-- #colophon -->
-<div class="site-footer-two">
+<div class="footer-top">
+	<div class="container">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'footer-nav',
+				'menu_id'         => 'site-footer-nav',
+				'container'       => 'div',
+				'container_class' => 'site-footer-nav'
+			)
+		);
+		?>
+	</div>
+</div>
+<div hidden class="site-footer-two">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
@@ -67,6 +81,35 @@
 					<div class="social-links">
 						<?php dynamic_sidebar( 'social-links' ); ?>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="top-bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+				<?php dynamic_sidebar( 'top-bar-left' ); ?>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+				<a href="<?php echo home_url() ?>/terms-of-use" class="text-center d-inline-block w-100">Terms of Use</a>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-12 col-sm-8 col-8">
+				<div class="top-right-bar">
+					<div class="social-links">
+						<?php dynamic_sidebar( 'social-links' ); ?>
+					</div>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'top-nav',
+							'menu_id'         => 'top-bar-nav',
+							'container'       => 'div',
+							'container_class' => 'top-bar-nav'
+						)
+					);
+					?>
 				</div>
 			</div>
 		</div>

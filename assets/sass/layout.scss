@@ -36,10 +36,33 @@ body {
 	overflow-x: hidden;
 }
 
+.stripe-right {
+	height: 100%;
+	width: 100%;
+	background-image: url(../img/strip-right.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+.stripe-left {
+	height: 100%;
+	width: 100%;
+	background-image: url(../img/strip-left.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
 .top-bar {
 	background-color: $Primary-Color;
 	color: $White;
 	padding: 8px 0;
+
+	a {
+		color: #ffffff;
+		text-decoration: none;
+	}
 
 	ul {
 		margin: 0;
@@ -139,9 +162,10 @@ body {
 }
 
 .site-header {
-	background-color: #ffffff;
 	padding: 30px 0;
 	transition: $Transition;
+	position: relative;
+	z-index: 9;
 
 	.site-branding {
 		line-height: 45px;
@@ -312,6 +336,7 @@ body {
 		top: 0;
 		padding: 10px 0;
 		box-shadow: 0 3px 11px #0a0a0a66;
+		background-color: #ffffff;
 	}
 
 }
@@ -476,6 +501,168 @@ body {
 					height: 25px;
 					width: 25px;
 					line-height: 25px;
+				}
+			}
+		}
+	}
+}
+
+.footer-top {
+	padding: 10px 0;
+
+	.site-footer-nav {
+		ul {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+
+			li {
+				list-style: none;
+				text-align: center;
+				display: inline-block;
+				padding: 0 10px;
+				position: relative;
+
+				&.menu-item-has-children {
+					&::after {
+						content: '';
+						height: 8px;
+						width: 8px;
+						display: block;
+						background-color: #fff;
+						border-bottom: 1px solid $Primary-Color;
+						border-right: 1px solid $Primary-Color;
+						transform: rotate(45deg);
+						position: absolute;
+						top: 17px;
+						right: 1px;
+						transition: $Transition;
+					}
+				}
+
+				a {
+					line-height: 48px;
+					text-decoration: none;
+					font-weight: 700;
+					font-size: 14px;
+					color: $Primary-Color;
+					border-bottom: 2px solid transparent;
+					text-transform: uppercase;
+
+					&:hover {
+						border-bottom: 2px solid $Primary-Color;
+
+
+					}
+				}
+
+				&:hover {
+					ul.sub-menu {
+						opacity: 1;
+						transform: translate(0, 0);
+						visibility: visible;
+					}
+				}
+
+				&.current-menu-item {
+					a {
+						border-bottom: 2px solid $Primary-Color;
+					}
+				}
+
+				&.cnt-btn {
+					min-width: 180px;
+					text-align: left;
+
+					a {
+						color: #fff;
+						background-color: $Secondary-Color;
+						display: block;
+						padding: 0 10px;
+						position: relative;
+
+						&::after {
+							content: '';
+							width: 20%;
+							height: 1px;
+							background-color: #fff;
+							position: absolute;
+							display: inline-block;
+							top: 23px;
+							right: 8px;
+						}
+					}
+				}
+			}
+
+			&.sub-menu {
+				//display: none;
+				z-index: 999;
+				position: absolute;
+				width: 150px;
+				max-width: none;
+				padding: 0;
+				background: #fff;
+				border-radius: 0;
+				left: 0;
+				visibility: hidden;
+				opacity: 0;
+				transform: translate(0, 10px);
+				transition: opacity 200ms ease-in, transform 200ms ease-in, visibility 200ms ease-in;
+				box-shadow: 0 3px 11px #0a0a0a66;
+
+				li {
+					display: block;
+					padding: 0;
+
+					&.menu-item-has-children {
+						&::after {
+							transform: rotate(-45deg);
+						}
+
+						ul {
+							&.sub-menu {
+								left: 100%;
+								top: 0;
+								position: absolute;
+								opacity: 0;
+								transform: translate(0, 10px);
+								transition: opacity 200ms ease-in, transform 200ms ease-in, visibility 200ms ease-in;
+							}
+						}
+
+					}
+
+					a {
+						display: block;
+						color: $Primary-Color;
+						font-size: 15px;
+						font-weight: normal;
+						padding: 5px 10px 5px 10px;
+						line-height: 35px;
+						text-decoration: none;
+						text-transform: none;
+						vertical-align: baseline;
+						text-align: left;
+						height: inherit;
+
+						&:hover {
+							text-decoration: none;
+							background-color: $Primary-Color;
+							color: #ffffff;
+						}
+					}
+
+					&:hover {
+						&.menu-item-has-children {
+							ul.sub-menu {
+								opacity: 1;
+								transform: translate(0, 0);
+								visibility: visible;
+								z-index: 1000;
+							}
+						}
+					}
 				}
 			}
 		}
