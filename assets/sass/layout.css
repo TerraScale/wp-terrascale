@@ -313,7 +313,7 @@ body {
   height: 100%;
   width: 100%;
   background-image: url(../img/strip-right.png);
-  position: absolute;
+  position: fixed;
   background-repeat: no-repeat;
   background-position: top right; }
 
@@ -321,7 +321,7 @@ body {
   height: 100%;
   width: 100%;
   background-image: url(../img/strip-left.png);
-  position: absolute;
+  position: fixed;
   background-repeat: no-repeat;
   background-position: top left; }
 
