@@ -59,6 +59,11 @@ body {
 	color: $White;
 	padding: 8px 0;
 
+	.container {
+		position: relative;
+		z-index: 9;
+	}
+
 	a {
 		color: #ffffff;
 		text-decoration: none;
@@ -1099,6 +1104,17 @@ body {
 	.author-info {
 		margin-top: 10px;
 	}
+}
+
+.pp-hover {
+	padding: 20px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.pp-hover:hover {
+	background: #04629b;
+	color: #fff;
 }
 
 @import '_custom.scss';
