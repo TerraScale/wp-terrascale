@@ -469,6 +469,10 @@ body {
 	padding: 40px 40px 20px;
 	color: #ffffff;
 
+	img {
+		width: 90%;
+	}
+
 	h5 {
 		color: $Secondary-Color;
 		margin-bottom: 10px;
@@ -477,18 +481,45 @@ body {
 	a {
 		color: #ffffff;
 		text-decoration: none;
+
+		&.sp-link {
+			color: #04629b;
+			background-color: #ffffff;
+			display: block;
+			padding: 10px;
+			position: relative;
+			text-decoration: none;
+
+			&::after {
+				content: '';
+				width: 20%;
+				height: 1px;
+				background-color: #04629b;
+				position: absolute;
+				display: inline-block;
+				top: 23px;
+				right: 8px;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 17px;
+		color: $Secondary-Color;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 20px;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
-		display: flex;
+		margin-bottom: 30px;
 
 		li {
 			list-style: none;
-			display: inline-block;
-			flex-grow: 1;
-			margin: 0;
+			display: block;
+			margin-bottom: 10px;
 
 			a {
 				color: #ffffff;
@@ -1115,6 +1146,26 @@ body {
 .pp-hover:hover {
 	background: #04629b;
 	color: #fff;
+}
+
+a.sp-link {
+	color: #04629b;
+	background-color: #ffffff;
+	display: block;
+	padding: 0 10px;
+	position: relative;
+	text-decoration: none;
+}
+
+a.sp-link::after {
+	content: '';
+	width: 20%;
+	height: 1px;
+	background-color: #04629b;
+	position: absolute;
+	display: inline-block;
+	top: 23px;
+	right: 8px;
 }
 
 @import '_custom.scss';

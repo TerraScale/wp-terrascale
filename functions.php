@@ -136,6 +136,17 @@ function terrascale_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'terrascale' ),
+			'id'            => 'footer',
+			'description'   => esc_html__( 'Add widgets here.', 'terrascale' ),
+			'before_widget' => '<div id="%1$s" class="%2$s col-lg-2 col-md-3 col-sm-3 col-6">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'terrascale_widgets_init' );

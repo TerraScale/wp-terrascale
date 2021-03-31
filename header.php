@@ -36,16 +36,7 @@
 					<div class="social-links">
 						<?php dynamic_sidebar( 'social-links' ); ?>
 					</div>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'top-nav',
-							'menu_id'         => 'top-bar-nav',
-							'container'       => 'div',
-							'container_class' => 'top-bar-nav'
-						)
-					);
-					?>
+
 				</div>
 			</div>
 		</div>
