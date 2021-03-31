@@ -435,7 +435,7 @@ body {
 		cursor: pointer;
 	}
 
-	&:hover {
+	&.active-hover {
 		background-color: $Secondary-Color;
 		color: #ffffff;
 
