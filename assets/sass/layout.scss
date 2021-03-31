@@ -38,20 +38,28 @@ body {
 
 .stripe-right {
 	height: 100%;
-	width: 100%;
+	width: 427px;
+	right: 0;
 	background-image: url(../img/strip-right.png);
 	position: fixed;
 	background-repeat: no-repeat;
 	background-position: top right;
+	z-index: 9;
 }
 
 .stripe-left {
 	height: 100%;
-	width: 100%;
+	width: 427px;
+	left: 0;
 	background-image: url(../img/strip-left.png);
 	position: fixed;
 	background-repeat: no-repeat;
 	background-position: top left;
+	z-index: 9;
+}
+
+.container {
+	z-index: 10;
 }
 
 .top-bar {
@@ -97,7 +105,6 @@ body {
 		justify-content: flex-end;
 
 		ul {
-			margin-right: 20px;
 
 			li {
 				padding: 0 10px;
@@ -170,7 +177,11 @@ body {
 	padding: 30px 0;
 	transition: $Transition;
 	position: relative;
-	z-index: 9;
+	z-index: 12;
+
+	.container {
+		z-index: 15;
+	}
 
 	.site-branding {
 		line-height: 45px;
@@ -469,8 +480,14 @@ body {
 	padding: 40px 40px 20px;
 	color: #ffffff;
 
+	.container {
+		position: relative;
+		z-index: 9;
+	}
+
 	img {
 		width: 90%;
+		margin-bottom: 30px;
 	}
 
 	h5 {
@@ -481,6 +498,8 @@ body {
 	a {
 		color: #ffffff;
 		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 17px;
 
 		&.sp-link {
 			color: #04629b;
@@ -525,7 +544,11 @@ body {
 				color: #ffffff;
 				text-decoration: none;
 				text-transform: uppercase;
-				font-size: 14px;
+				font-size: 17px;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
