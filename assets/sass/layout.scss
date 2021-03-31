@@ -477,8 +477,11 @@ body {
 
 .site-footer {
 	background-color: #000000;
+	background-image: url(../img/footer-bg.png);
+	background-repeat: no-repeat;
 	padding: 40px 40px 20px;
 	color: #ffffff;
+	background-size: cover;
 
 	.container {
 		position: relative;
@@ -1173,11 +1176,12 @@ body {
 
 a.sp-link {
 	color: #04629b;
-	background-color: #ffffff;
-	display: block;
-	padding: 0 10px;
+	background-color: #fff;
+	display: inline-block;
+	padding: 14px 44px;
 	position: relative;
 	text-decoration: none;
+	margin-top: 20px;
 }
 
 a.sp-link::after {
@@ -1187,7 +1191,7 @@ a.sp-link::after {
 	background-color: #04629b;
 	position: absolute;
 	display: inline-block;
-	top: 23px;
+	top: 26px;
 	right: 8px;
 }
 

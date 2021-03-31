@@ -164,7 +164,7 @@ function terrascale_scripts() {
 	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/assets/js/jquery-3.5.1.min.js', array(), '3.5.1', true );
 	wp_enqueue_script( 'BootStrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
 	wp_enqueue_script( 'Custom', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true );
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
