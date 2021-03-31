@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div class="container">
-				<p class="text-md-start text-sm-center text-center m-0 fw-bold" style="color: #323232">
+				<p class="text-md-start text-sm-center text-center m-0 fw-bold" style="color: #f0f0f0">
 					© <?php echo date( 'Y' ); ?> TerraScale, Inc.
 				</p>
 	</div>
