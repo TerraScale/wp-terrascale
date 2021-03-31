@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="wptime-plugin-preloader"></div>
 <?php wp_body_open(); ?>
 <div class="stripe-right"></div>
 <div class="stripe-left"></div>
