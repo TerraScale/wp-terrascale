@@ -18,18 +18,9 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-sm-12 col-12">
 				<p class="text-md-start text-sm-center text-center m-0 fw-bold" style="color: #323232">
 					© <?php echo date( 'Y' ); ?> TerraScale, Inc.
 				</p>
-			</div>
-			<div class="col-md-6 col-sm-12 col-12">
-				<p class="text-md-end text-sm-center text-center m-0">
-					<a href="<?php echo home_url(); ?>/terms-of-use">Terms of Use</a>
-				</p>
-			</div>
-		</div>
 	</div>
 </div>
 

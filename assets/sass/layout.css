@@ -401,7 +401,7 @@ body {
       font-size: 11px; }
 
 .site-header {
-  padding: 30px 0;
+  padding: 15px 0;
   transition: all 0.5s ease;
   position: relative;
   z-index: 12; }
@@ -417,7 +417,7 @@ body {
       list-style: none;
       text-align: center;
       display: inline-block;
-      padding: 0 10px;
+      padding: 0 15px;
       position: relative; }
       .site-header .site-navigation ul li.menu-item-has-children::after {
         content: '';
@@ -436,7 +436,7 @@ body {
         line-height: 48px;
         text-decoration: none;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
         color: #04629b;
         border-bottom: 2px solid transparent;
         text-transform: uppercase; }
@@ -533,7 +533,7 @@ body {
           right: 8px; }
 
 .ExPadd {
-  padding-top: 80px; }
+  padding-top: 48px; }
 
 .w-0-p .vc_column-inner {
   padding: 0 !important; }
@@ -615,12 +615,12 @@ body {
       font-weight: bold; }
 
 .site-footer {
-  background-color: #000000;
-  background-image: url(../img/footer-bg.png);
+  background-color: #0c2b59;
   background-repeat: no-repeat;
   padding: 40px 40px 20px;
   color: #ffffff;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
   .site-footer .container {
     position: relative;
     z-index: 9; }
@@ -653,7 +653,7 @@ body {
         right: 8px; }
   .site-footer h2 {
     font-size: 17px;
-    color: #0173b7;
+    color: #3c72a1;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px; }
@@ -906,7 +906,6 @@ body {
   justify-content: center;
   width: 80%;
   margin: 0 auto;
-  box-shadow: 0 0 17px #0000006b;
   z-index: 2;
   position: relative; }
 .ver-title-header .ver-text-block {
@@ -921,9 +920,9 @@ body {
 .primary-box {
   color: #ffffff; }
   .primary-box .head-block {
-    background-color: #04629b; }
+    background-color: rgba(0, 124, 201, 0.7); }
   .primary-box .ver-text-block {
-    background-color: #04629b; }
+    background-color: rgba(0, 124, 201, 0.7); }
 
 .gp-block ul {
   margin: 0;
@@ -1055,7 +1054,9 @@ body {
 
 .blog-posts {
   margin-bottom: 10px;
-  min-height: 700px; }
+  min-height: 700px;
+  position: relative;
+  z-index: 9; }
   .blog-posts img {
     margin-bottom: 30px; }
   .blog-posts a {
