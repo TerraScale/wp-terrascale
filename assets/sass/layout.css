@@ -412,7 +412,7 @@ body {
   .site-header .site-navigation ul {
     margin: 0;
     padding: 0;
-    text-align: right; }
+    text-align: center; }
     .site-header .site-navigation ul li {
       list-style: none;
       text-align: center;
@@ -448,24 +448,6 @@ body {
         visibility: visible; }
       .site-header .site-navigation ul li.current-menu-item a {
         border-bottom: 2px solid #04629b; }
-      .site-header .site-navigation ul li.cnt-btn {
-        min-width: 180px;
-        text-align: left; }
-        .site-header .site-navigation ul li.cnt-btn a {
-          color: #fff;
-          background-color: #0173b7;
-          display: block;
-          padding: 0 10px;
-          position: relative; }
-          .site-header .site-navigation ul li.cnt-btn a::after {
-            content: '';
-            width: 20%;
-            height: 1px;
-            background-color: #fff;
-            position: absolute;
-            display: inline-block;
-            top: 23px;
-            right: 8px; }
     .site-header .site-navigation ul.sub-menu {
       z-index: 999;
       position: absolute;
@@ -521,6 +503,34 @@ body {
     padding: 10px 0;
     box-shadow: 0 3px 11px #0a0a0a66;
     background-color: #ffffff; }
+  .site-header ul.sp-link-menu {
+    margin: 0;
+    padding: 0; }
+    .site-header ul.sp-link-menu li {
+      list-style: none; }
+      .site-header ul.sp-link-menu li a {
+        color: #fff;
+        background-color: #0173b7;
+        display: block;
+        padding: 0 10px;
+        position: relative;
+        width: 150px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-size: 14px; }
+        .site-header ul.sp-link-menu li a:after {
+          content: '';
+          width: 20%;
+          height: 1px;
+          background-color: #fff;
+          position: absolute;
+          display: inline-block;
+          top: 23px;
+          right: 8px; }
 
 .ExPadd {
   padding-top: 80px; }

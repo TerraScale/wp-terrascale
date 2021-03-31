@@ -50,7 +50,7 @@
 					<?php the_custom_logo(); ?>
 				</div>
 			</div>
-			<div class="col-xl-10 col-lg-12 col-md-6 col-sm-2 col-6">
+			<div class="col-xl-8 col-lg-10 col-md-6 col-sm-2 col-6">
 				<div class="d-lg-block d-md-none d-none">
 					<?php
 					wp_nav_menu(
@@ -69,6 +69,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-xl-2 col-lg-2 d-lg-block d-md-none d-none text-end">
+				<ul class="sp-link-menu">
+					<li><a href="<?php echo home_url(); ?>/contact-us">Contact Us</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div><!-- #masthead -->
@@ -77,7 +82,7 @@
 	<?php
 	wp_nav_menu(
 		array(
-			'theme_location'  => 'header-nav',
+			'theme_location'  => 'mobile-nav',
 			'menu_id'         => 'primary-menu',
 			'container'       => 'nav',
 			'container_id'    => 'mobile-navigation',

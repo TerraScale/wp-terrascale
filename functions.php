@@ -51,6 +51,7 @@ if ( ! function_exists( 'terrascale_setup' ) ) :
 		register_nav_menus(
 			array(
 				'header-nav' => esc_html__( 'Header Nav', 'terrascale' ),
+				'mobile-nav' => esc_html__( 'Mobile Nav', 'terrascale' ),
 				'top-nav'    => esc_html__( 'Top Nav', 'terrascale' ),
 				'footer-nav' => esc_html__( 'Footer Nav', 'terrascale' )
 			)
