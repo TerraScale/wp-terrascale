@@ -10,10 +10,6 @@ after install Run gem install sass in terminal.
 then you will able to run this command (sass --watch sass:css --style compressed).
 if you know any other mathod that will be wonderfull.
 
-```sh
-$ composer install
-$ npm install
-```
 
 ### Available CLI commands
 
