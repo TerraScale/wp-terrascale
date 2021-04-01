@@ -35,7 +35,7 @@ $page_id = get_the_archive_title();
 			<div class="container">
 				<div class="col-md-9 col-sm-12 col-12">
 					<h1 class="fw-bold"><?php echo get_the_title(); ?></h1>
-					<p><?php $content = substr( get_the_content(), 0, 269 );
+					<p><?php $content = substr( get_the_content(), 0, 100 );
 						echo wp_filter_nohtml_kses( $content ); //or strip_tags?> ... </p>
 					<div class="post-meta">
 						<div class="row">
@@ -72,7 +72,7 @@ $page_id = get_the_archive_title();
 					<h3
 						class="fw-bold"><?php echo wp_trim_words( get_the_title(), 10 ); ?>
 					</h3>
-					<p><?php $content = substr( get_the_content(), 0, 300 );
+					<p><?php $content = substr( get_the_content(), 0, 100 );
 						echo wp_filter_nohtml_kses( $content ); //or strip_tags?> ... </p>
 					<a href="<?php echo get_the_permalink(); ?>">Read More!</a>
 					<div class="author-info">
