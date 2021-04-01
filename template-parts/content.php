@@ -44,7 +44,7 @@
 						),
 					)
 				),
-				wp_kses_post( get_the_title() )
+				wp_trim_words( get_the_content(), 5);
 			)
 		);
 
