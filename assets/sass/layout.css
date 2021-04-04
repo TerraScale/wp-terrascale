@@ -412,7 +412,7 @@ body {
   .site-header .site-navigation ul {
     margin: 0;
     padding: 0;
-    text-align: center; }
+    text-align: right; }
     .site-header .site-navigation ul li {
       list-style: none;
       text-align: center;
