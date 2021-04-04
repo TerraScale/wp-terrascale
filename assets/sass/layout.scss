@@ -1080,8 +1080,8 @@ body {
 
 .full-bg {
 	background-color: #ffffff;
-	background-repeat: no-repeat;
 	background-position: top right;
+	background-size: cover;
 
 	&.blog-bg {
 		background-image: url("../img/blog-bg.png");

@@ -988,8 +988,8 @@ body {
 
 .full-bg {
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: top right; }
+  background-position: top right;
+  background-size: cover; }
   .full-bg.blog-bg {
     background-image: url("../img/blog-bg.png"); }
   .full-bg.press-bg {
