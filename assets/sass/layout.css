@@ -1008,8 +1008,10 @@ body {
   background-size: cover;
   padding: 120px 0;
   margin-bottom: 140px;
-  text-shadow: 0 0 10px black; }
-  .full-width h1 {
+  text-shadow: 0 0 10px black;
+  background-position: center; }
+  .full-width c
+  h1 {
     margin-bottom: 10px; }
   .full-width p {
     margin-bottom: 10px; }
@@ -1065,10 +1067,12 @@ body {
     display: inline-block;
     font-weight: bold; }
   .blog-posts h3 {
-    height: 130px;
+    height: 70px;
     overflow: hidden; }
   .blog-posts p {
-    margin: 0; }
+    max-height: 98px;
+    overflow: hidden;
+    margin-bottom: 20px; }
   .blog-posts .author-info {
     margin-top: 10px; }
 

@@ -1108,7 +1108,9 @@ body {
 	padding: 120px 0;
 	margin-bottom: 140px;
 	text-shadow: 0 0 10px black;
+	background-position: center;
 
+	c
 	h1 {
 		margin-bottom: 10px;
 	}
@@ -1190,14 +1192,14 @@ body {
 	}
 
 	h3 {
-		height: 130px;
+		height: 70px;
 		overflow: hidden;
-
-
 	}
 
 	p {
-		margin: 0;
+		max-height: 98px;
+		overflow: hidden;
+		margin-bottom: 20px;
 	}
 
 	.author-info {

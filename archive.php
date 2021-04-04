@@ -76,9 +76,9 @@ $page_id = get_the_archive_title();
 						echo wp_filter_nohtml_kses( $content ); //or strip_tags?> ... </p>
 					<a href="<?php echo get_the_permalink(); ?>">Read More!</a>
 					<div class="author-info">
-						<p class="fw-bold"><?php echo get_the_author_meta( 'display_name', get_the_author_meta( 'ID' ) );
+						<p class="fw-bold mb-0"><?php echo get_the_author_meta( 'display_name', get_the_author_meta( 'ID' ) );
 							?></p>
-						<p><?php echo get_the_author_meta( 'description' ) ?></p>
+						<p class="mb-0"><?php echo get_the_author_meta( 'description' ) ?></p>
 						<time datetime="<?php echo get_the_date( 'c' ); ?>"
 							  itemprop="datePublished"><?php echo get_the_date(); ?></time>
 					</div>
