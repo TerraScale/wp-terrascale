@@ -1162,11 +1162,11 @@ nav.navigation.post-navigation {
   .under-slider h2 {
     font-size: 18px; } }
 @media (max-width: 768px) {
-  .stripe-right {
-    background-size: 300px; }
+  .stripe-right, .stripe-left {
+    width: 100px; }
 
-  .stripe-left {
-    background-size: 300px; }
+  .wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid > li {
+    margin-bottom: 0; }
 
   .top-bar ul li span {
     display: none; }
