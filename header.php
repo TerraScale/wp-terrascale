@@ -24,7 +24,7 @@
 <div id="wptime-plugin-preloader"></div>
 <?php wp_body_open(); ?>
 <div class="stripe-right"></div>
-<div class="stripe-left" <?php if ( is_page( '60' ) ) {
+<div class="stripe-left" <?php if ( is_page( '60' ) == true) {
 	echo 'hidden';
 } ?>></div>
 <div class="top-bar">
