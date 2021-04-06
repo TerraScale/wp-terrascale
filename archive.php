@@ -52,7 +52,7 @@ $page_id = get_the_archive_title();
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-12 col-12">
-								<a href="<?php echo get_the_permalink(); ?>">Read More!</a>
+								<a href="<?php echo get_field( 'link_to' ); ?>" target="_blank">Read More!</a>
 							</div>
 						</div>
 					</div>
@@ -74,7 +74,7 @@ $page_id = get_the_archive_title();
 					</h3>
 					<p><?php $content = substr( get_the_content(), 0, 400 );
 						echo wp_filter_nohtml_kses( $content ); //or strip_tags?> ... </p>
-					<a href="<?php echo get_the_permalink(); ?>">Read More!</a>
+					<a href="<?php echo get_field( 'link_to' ); ?>" target="_blank">Read More!</a>
 					<div class="author-info">
 						<p class="fw-bold mb-0"><?php echo get_the_author_meta( 'display_name', get_the_author_meta( 'ID' ) );
 							?></p>
