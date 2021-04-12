@@ -18,9 +18,6 @@ $page_id = get_the_archive_title();
 } else {
 	echo 'press-bg';
 } ?>">
-	<div class="post-head">
-		<h1><?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?></h1>
-	</div>
 
 	<div class="container">
 		<?php if ( have_posts() ) :
@@ -33,55 +30,56 @@ $page_id = get_the_archive_title();
 		<div id="post-<?php the_ID(); ?>" class="full-width"
 			 style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
 			<div class="container">
-				<div class="col-md-9 col-sm-12 col-12">
-					<h1 class="fw-bold"><?php echo get_the_title(); ?></h1>
+				<div class="col-md-6 col-sm-12 col-12">
+					<h1 class="h2"><?php echo get_the_title(); ?></h1>
 					<p><?php $content = substr( get_the_content(), 0, 300 );
 						echo wp_filter_nohtml_kses( $content ); //or strip_tags?> ... </p>
 					<div class="post-meta">
-						<div class="row">
-							<div class="col-md-9 col-sm-12 col-12">
-								<div class="d-flex">
-									<img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ) ); ?>" alt="">
-									<div class="author-info">
-										<h4><?php echo get_the_author_meta( 'display_name', get_the_author_meta( 'ID' ) );
-											?></h4>
-										<p><?php echo get_the_author_meta( 'description' ) ?></p>
-										<time datetime="<?php echo get_the_date( 'c' ); ?>"
-											  itemprop="datePublished"><?php echo get_the_date(); ?></time>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-12 col-12">
-								<a href="<?php echo get_field( 'link_to' ); ?>" target="_blank">Read More!</a>
-							</div>
-						</div>
+						<?php if(get_field('link_to')) : ?>
+							<a href="<?php the_field( 'link_to' ); ?>" target="_blank">Read More</a>
+						<?php else : ?>
+							<a href="<?php echo get_permalink(); ?>">Read More</a>
+						<?php endif; ?>
 					</div>
 				</div>
 
 			</div>
 		</div>
+		<div class="post-head">
+			<h2><?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?></h2>
+		</div>
 		<div class="row">
 			<?php else: ?>
 				<div id="post-<?php the_ID(); ?>" class=" blog-posts col-lg-4 col-md-4 col-sm-6 col-12">
 					<?php $image = get_the_post_thumbnail_url( $post->ID, 'custom-thumb' ); ?>
-					<?php if ( $image ): ?>
-						<img src="<?php echo $image; ?>" alt="<?php echo get_the_title(); ?>">
-					<?php else: ?>
-						<img src="https://via.placeholder.com/700x500" alt="<?php echo get_the_title(); ?>">
+					<?php if(get_field('link_to')) : ?>
+						<a href="<?php the_field( 'link_to' ); ?>" target="_blank">
+					<?php else : ?>
+						<a href="<?php echo get_permalink(); ?>">
 					<?php endif; ?>
+						<?php if ( $image ): ?>
+							<img src="<?php echo $image; ?>" alt="<?php echo get_the_title(); ?>">
+						<?php else: ?>
+							<img src="https://via.placeholder.com/700x500" alt="<?php echo get_the_title(); ?>">
+						<?php endif; ?>
+					</a>
 					<h3
 						class="fw-bold"><?php echo wp_trim_words( get_the_title(), 10 ); ?>
 					</h3>
 					<p><?php $content = substr( get_the_content(), 0, 400 );
 						echo wp_filter_nohtml_kses( $content ); //or strip_tags?> ... </p>
-					<a href="<?php echo get_field( 'link_to' ); ?>" target="_blank">Read More!</a>
-					<div class="author-info">
-						<p class="fw-bold mb-0"><?php echo get_the_author_meta( 'display_name', get_the_author_meta( 'ID' ) );
+						<?php if(get_field('link_to')) : ?>
+							<a href="<?php the_field( 'link_to' ); ?>" target="_blank">Read More</a>
+						<?php else : ?>
+							<a href="<?php echo get_permalink(); ?>">Read More</a>
+						<?php endif; ?>
+					<!--div class="author-info">
+						<p class="fw-bold mb-0"><php echo get_the_author_meta( 'display_name', get_the_author_meta( 'ID' ) );
 							?></p>
-						<p class="mb-0"><?php echo get_the_author_meta( 'description' ) ?></p>
-						<time datetime="<?php echo get_the_date( 'c' ); ?>"
-							  itemprop="datePublished"><?php echo get_the_date(); ?></time>
-					</div>
+						<p class="mb-0"><php echo get_the_author_meta( 'description' ) ?></p>
+						<time datetime="<php echo get_the_date( 'c' ); ?>"
+							  itemprop="datePublished"><php echo get_the_date(); ?></time>
+					</div-->
 				</div>
 			<?php endif; ?>
 

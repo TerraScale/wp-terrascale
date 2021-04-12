@@ -86,8 +86,8 @@ if ( ! function_exists( 'terrascale_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 44,
-				'width'       => 288,
+				'height'      => 70,
+				'width'       => 350,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
@@ -158,6 +158,8 @@ add_action( 'widgets_init', 'terrascale_widgets_init' );
 function terrascale_scripts() {
 	wp_enqueue_style( 'terrascale-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	wp_enqueue_style( 'terrascale-style', get_stylesheet_uri(), '/style.css', _S_VERSION );
+
 	wp_enqueue_style( 'BootStrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.0.0' );
 	wp_enqueue_style( 'FontAw', get_template_directory_uri() . '/assets/css/all.min.css', array(), '5.15.1' );
 	wp_enqueue_style( 'Layout', get_template_directory_uri() . '/assets/css/layout.css', array(), _S_VERSION );
@@ -226,8 +228,7 @@ function insert_fb_in_head() {
 		$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 		echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
 	}
-	echo "
-";
+	echo "";
 }
 
-add_action( 'wp_head', 'insert_fb_in_head', 5 );
+//add_action( 'wp_head', 'insert_fb_in_head', 5 );
